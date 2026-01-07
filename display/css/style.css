@@ -1,0 +1,33 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+.card{
+  display: block;
+  background: #111;
+  border-radius: 4px;
+  margin: 20px 40px 0px 40px;
+  padding: 20px 40px;
+}
+
+.card h2{
+  color: white;
+}
+
+.card p{
+  color: #b2b2b2
+}
+
+.amarelo{
+  color: #febe01;
+}
+
+.card button{
+  padding: 20px 20px;
+  background: #febe01;
+  border-radius: 4px;
+  font-size: 16px;
+}
