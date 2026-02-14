@@ -83,13 +83,18 @@ menu {
   font-size: 2rem;
 }
 
-.introducao::before{
+.introducao::before {
   content: ""; /* pseudo-elementos sempre tem que ter um conteúdo, senão ele não funciona*/
   width: 60px;
   height: 4px;
   background: #e21;
   position: absolute;
   top: 30px;
+}
+
+.introducao-cover img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .botao {
@@ -113,6 +118,7 @@ menu {
   padding: 40px;
   align-self: center;
   background-image: url(img/pattern.svg);
+  /*word-break: break-all;*/
 }
 
 .vantagens {
@@ -146,4 +152,45 @@ menu {
   text-align: center;
   padding: 40px;
   box-sizing: border-box; /* impede o elemento de criar rolagem horizontal */
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao::before {
+    display: none;
+  }
+  .subtitulo{
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 400px){
+  .subtitulo{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+  }
 }
