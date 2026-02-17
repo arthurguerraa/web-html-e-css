@@ -1,11 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
-  background: #f7f7f7;
   display: grid;
   gap: 60px;
   justify-items: center;
   margin-top: 60px;
+  background-color: #f7f7f7;
 }
 
 img {
@@ -18,9 +18,9 @@ a {
 }
 
 ul {
-  list-style: none;
   margin: 0px;
   padding: 0px;
+  list-style: none;
 }
 
 p,
@@ -37,11 +37,11 @@ p {
 
 .header {
   display: grid;
-  justify-items: center;
   gap: 60px;
+  justify-items: center;
 }
 
-menu {
+.menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -69,7 +69,7 @@ menu {
 }
 
 .introducao {
-  background-color: #fff;
+  background: #fff;
   padding: 40px;
   text-align: right;
   position: relative;
@@ -84,12 +84,13 @@ menu {
 }
 
 .introducao::before {
-  content: ""; /* pseudo-elementos sempre tem que ter um conteúdo, senão ele não funciona*/
+  content: "";
   width: 60px;
   height: 4px;
   background: #e21;
   position: absolute;
   top: 30px;
+  right: -30px;
 }
 
 .introducao-cover img {
@@ -103,7 +104,6 @@ menu {
   padding: 1rem 2rem;
   border-radius: 4px;
   text-transform: uppercase;
-  right: -30px;
 }
 
 .botao:hover {
@@ -117,8 +117,8 @@ menu {
   text-align: right;
   padding: 40px;
   align-self: center;
-  background-image: url(img/pattern.svg);
-  /*word-break: break-all;*/
+  background-image: url("./img/onda.svg");
+  /* word-break: break-all; */
 }
 
 .vantagens {
@@ -129,17 +129,17 @@ menu {
 .vantagens-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 10px 20px; /* linha/coluna */
+  gap: 10px 20px;
   padding: 20px;
   border-left: 4px solid transparent;
 }
 
-.vantagens-item:hover {
-  border-color: #e21;
-}
-
 .vantagens-item:nth-child(odd) {
   background: #f7f7f7;
+}
+
+.vantagens-item:hover {
+  border-color: #e21;
 }
 
 .vantagens-item p {
@@ -151,7 +151,7 @@ menu {
   width: 100%;
   text-align: center;
   padding: 40px;
-  box-sizing: border-box; /* impede o elemento de criar rolagem horizontal */
+  box-sizing: border-box;
 }
 
 @media (max-width: 1000px) {
@@ -171,26 +171,26 @@ menu {
   .header {
     gap: 30px;
   }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
   .introducao {
     text-align: left;
     justify-items: start;
   }
-  .conteudo {
-    grid-template-columns: 1fr;
-  }
   .introducao::before {
     display: none;
   }
-  .subtitulo{
+  .subtitulo {
     font-size: 3rem;
   }
 }
 
-@media(max-width: 400px){
-  .subtitulo{
+@media (max-width: 400px) {
+  .subtitulo {
     font-size: 2rem;
   }
-  p{
+  p {
     font-size: 1rem;
   }
 }
