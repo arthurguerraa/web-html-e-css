@@ -1,0 +1,78 @@
+:root {
+  --background-geral: #0f172a;
+  --cards: #1e293b;
+  --texto-principal: #f1f5f9;
+  --texto-secundario: #94a3b8;
+  --cor-destaque: #3b82f6;
+  --hover-botao: #2563eb;
+  /* Plano Pro */
+  --fundo: #2563eb;
+  --texto: #fff;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background-geral);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main{
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+main h1 {
+  color: var(--texto-principal);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.plano {
+  background: var(--cards);
+  border-radius: 4px;
+  padding: 3rem 4rem;
+  text-align: left;
+}
+
+.plano h2 {
+  font-size: 2.5rem;
+  color: var(--texto-principal);
+}
+
+.plano p {
+  font-size: 2rem;
+  color: var(--texto-secundario);
+}
+
+.btn-assinar{
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+}
+
+.btn-assinar:hover{
+  background: var(--hover-botao);
+  color: var(--texto);
+}
+
+.destaque{
+  color: var(--cor-destaque);
+}
+
+.plano-pro{
+  background: var(--fundo);
+  color: var(--texto);
+}
