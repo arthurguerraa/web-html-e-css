@@ -18,64 +18,54 @@ html {
   font-size: 62.5%;
 }
 
-body {
+body{
   background: var(--background-geral);
 }
 
-main{
+.principal{
   max-width: 100rem;
   margin: 0 auto;
 }
 
-main h1 {
-  color: var(--texto-principal);
-  font-size: 4rem;
+.principal h1{
   text-align: center;
+  color: var(--texto-principal);
 }
 
-.container {
+.container{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.plano {
+.produto{
+  font-size: 2rem;
   background: var(--cards);
   border-radius: 4px;
-  padding: 3rem 4rem;
-  text-align: left;
+  padding: 1rem 2rem;
+  margin-top: 4rem;
+  width: 18rem;
 }
 
-.plano h2 {
-  font-size: 2.5rem;
-  color: var(--texto-principal);
-}
-
-.plano p {
-  font-size: 2rem;
+.produto p{
   color: var(--texto-secundario);
 }
 
-.btn-assinar{
+.btn-comprar{
   cursor: pointer;
   border-radius: 4px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
 }
 
-.btn-assinar:hover{
+.btn-comprar:hover{
   background: var(--hover-botao);
   color: var(--texto);
 }
 
-.destaque{
-  color: var(--cor-destaque);
-}
-
-.plano-pro{
-  background: var(--fundo);
-}
-
-.plano-pro h2, .plano-pro p{
-  color: var(--texto);
+@media(max-width: 850px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
 }
