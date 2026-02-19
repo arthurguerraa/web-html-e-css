@@ -63,10 +63,11 @@ body{
   color: var(--texto);
 }
 
-@media(max-width: 850px){
+@media(max-width: 955px){
   .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
   }
 }
